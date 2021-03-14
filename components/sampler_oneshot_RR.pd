@@ -2,7 +2,7 @@
 #X obj 422 -30 inlet path;
 #X obj 54 -30 inlet play;
 #X obj 54 450 outlet~;
-#N canvas 210 550 504 207 tables 1;
+#N canvas 210 550 504 207 tables 0;
 #N canvas 0 22 450 300 (subpatch) 0;
 #X array \$0-arrayL 88200 float 4 black black;
 #X coords 0 1 88199 -1 200 140 1;
@@ -12,7 +12,7 @@
 #X coords 0 1 88199 -1 200 140 1;
 #X restore 249 -52 graph;
 #X restore 623 -30 pd tables;
-#X obj 422 61 pack symbol \$0;
+#X obj 422 11 pack symbol \$0;
 #X obj 827 73 switch~;
 #X msg 827 36 1;
 #X msg 867 36 0;
@@ -26,8 +26,8 @@
 #X obj 124 336 sel 0;
 #X obj 124 309 change;
 #X obj 54 -1 t f b;
-#X obj 422 325 soundfiler;
-#X msg 422 166 read -resize \$1 \$0-arrayL \$0-arrayR;
+#X obj 422 93 soundfiler;
+#X msg 422 52 read -resize \$1 \$0-arrayL \$0-arrayR;
 #X obj 54 170 tabplay~ \$0-arrayL;
 #X obj 81 196 tabplay~ \$0-arrayR;
 #X obj 112 450 outlet~;
